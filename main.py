@@ -24,7 +24,7 @@ def get_browser(hiden_key):
 
 def parser(ident, hiden_key=True):
     """
-    ident идентификатор по которому получать данные компании (инн, огрн онргип)
+    ident строковый идентификатор по которому получать данные компании (инн, огрн онргип)
     если нужно чтобы окно браузера отображалось передай вторым именнованным аргуметом False
     """
     browser = get_browser(hiden_key)
@@ -45,9 +45,8 @@ def parser(ident, hiden_key=True):
         return ()
 
 
-
 if __name__ == '__main__':
-    # idn = "636300079791"
     idn = "7714964363"
-    dd = parser(idn)
-    print()
+    print(parser(idn))
+    idn = "636300079791"
+    print(parser(idn))
